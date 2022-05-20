@@ -26,7 +26,7 @@ levels:
         color: [1, 0, 0, 0.5]
         filename: f6_lift.png
         transform:
-          scale: 0.04275
+          scale: 0.04573
           translation_x: 0
           translation_y: 0
           yaw: 0
