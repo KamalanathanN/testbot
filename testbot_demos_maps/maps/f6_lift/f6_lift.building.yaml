@@ -1,0 +1,42 @@
+coordinate_system: reference_image
+crowd_sim:
+  agent_groups:
+    - {agents_name: [testbot], agents_number: 1, group_id: 0, profile_selector: external_agent, state_selector: external_static, x: 0, y: 0}
+  agent_profiles:
+    - {ORCA_tau: 1, ORCA_tauObst: 0.4, class: 1, max_accel: 0, max_angle_vel: 0, max_neighbors: 10, max_speed: 0, name: external_agent, neighbor_dist: 5, obstacle_set: 1, pref_speed: 0, r: 0.25}
+  enable: 0
+  goal_sets: []
+  model_types: []
+  obstacle_set: {class: 1, file_name: floor_navmesh.nav, type: nav_mesh}
+  states:
+    - {final: 1, goal_set: -1, name: external_static, navmesh_file_name: ""}
+  transitions: []
+  update_time_step: 0.1
+graphs:
+  {}
+levels:
+  floor:
+    drawing:
+      filename: f6_lift.png
+    elevation: 0
+    lanes:
+      - [2, 3, {bidirectional: [4, true], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
+    layers:
+      map:
+        color: [1, 0, 0, 0.5]
+        filename: f6_lift.png
+        transform:
+          scale: 0.04275
+          translation_x: 0
+          translation_y: 0
+          yaw: 0
+        visible: true
+    measurements:
+      - [0, 1, {distance: [3, 2.7]}]
+    vertices:
+      - [1130.883, 1007.758, 0, ""]
+      - [1128.734, 948.758, 0, ""]
+      - [1001.747, 983.338, 0, start, {is_charger: [4, true], is_holding_point: [4, true], is_parking_spot: [4, true], spawn_robot_name: [1, testbot], spawn_robot_type: [1, TestBot]}]
+      - [1068.366, 983.338, 0, finish, {is_holding_point: [4, true], is_parking_spot: [4, false]}]
+lifts: {}
+name: f6_lift
